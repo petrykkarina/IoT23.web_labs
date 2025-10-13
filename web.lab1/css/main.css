@@ -1,0 +1,389 @@
+body {
+    background-color: white;
+    font-family: "Rubik", sans-serif;
+    padding: 38px 150px 34px;
+    font-size: 16px;
+    color: #0B132A;
+}
+
+a{ 
+    text-decoration: none;
+}
+
+header.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon{
+    height: 36px;
+    width: 35px;
+}
+
+.logo-text{
+    color: #0B132A;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.bold-logo {
+    font-weight: 700;
+}
+
+.nav-center ul{
+    list-style: none;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+}
+
+.nav-center ul li a:hover{
+    color:#F53838;
+}
+
+.nav-center ul li a {
+    font-size: 16px;
+    color:#4F5665;
+}
+
+.authorisation{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.authorisation .sing-in {
+    color: #0B132A;
+    font-weight: 500;
+}   
+
+.authorisation .sing-up {
+    background-color: white;
+    padding: 9px 17px;
+    border: 1px solid #F53855;
+    width: 100px;
+    height: 20px;
+    border-radius: 50px;
+    text-align: center; 
+    color:#F53855;
+    font-weight: 500;
+} 
+
+.authorisation .sing-up:hover {
+    background-color: #F53838;
+    color: white;
+    transform: translateY(-3px) scale(1.05); 
+    
+}
+
+.authorisation .sing-in:active {
+    transform: scale(0.97); 
+}
+
+.main-hero{
+    padding-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.hero--info{
+    width: 555px;
+    padding-top: 80px;
+}
+
+.main__hero--info h1{
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 70px;
+    margin-bottom: 20px;
+}
+
+.main__hero--title{
+    font-weight: 700;
+}
+
+.main__hero--info p{
+    color:#4F5665;
+    font-weight: 400;
+    line-height: 30px;
+    
+}
+
+.main__hero--p{
+    font-weight: 500;
+}
+
+.main__hero--btn{
+    margin-top: 20px;
+    width: 250px;
+    height: 60px;
+    background: #F53838;
+    color:white;
+    border-radius: 10px;
+    padding: 15px 30px;
+    border: 0;
+    box-shadow: 0 22px 54px #F5383859;
+    font-weight: 700;
+    line-height: 25px;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+
+.main__hero--btn:hover{
+    transform: scale(1.05);
+
+}
+
+.features{
+    background: linear-gradient(180deg, #F6F5F5 -45.04%, #FFFFFF 19.67%, #F4F3F3 88.56%);
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 110px;
+    padding: 73px;
+}
+
+.features img{
+    width: 508px;
+    height: 417px;
+    flex-shrink: 0;
+    padding-left: 29px;
+}
+
+.features__text{
+    max-width: 420px;
+    margin-left: 20px;
+}
+
+.features__title{
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 50px;
+    padding-right: 10px;
+}
+
+.features p {
+    font-weight: 400;
+    line-height: 30px;
+    color: #4F5665;
+    margin-top: 20px;
+    margin-bottom: 20px;    
+
+}
+
+.features__list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.features__list li {
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size: 14px;
+    font-weight:400;
+    color: #4F5665;
+    margin-bottom: 15px;
+}
+.features__list li img{
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.testimonials{
+    padding-top: 73px;
+    text-align: center;
+}
+.testimonials__container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.testimonials__title{
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 50px;
+    padding-left: 390px;
+    padding-right: 380px;
+    margin-bottom: 20px;
+}
+
+.testimonials__p{
+    font-weight: 400;
+    line-height: 30px;
+    color: #4F5665;
+    padding-left: 350px;
+    padding-right: 340px;
+    padding-bottom: 58px;
+}
+
+.testimonials__list{
+    display: flex;
+    justify-content: center;
+    gap: 43px;
+    flex-wrap: wrap;
+}
+
+.testimonials__item{
+    flex: 1 1 300px;
+    max-width: 350px;
+    max-height: 230px;
+    border: 1px solid #DDDDDD;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: left;
+    margin-bottom: 75px;
+}
+
+.testimonials__item--active{
+    border: 2px solid #F53838;
+}
+
+.testimonials__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.testimonials__info{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.testimonials__img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonials__name{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.testimonials__location{
+    font-size: 14px;
+    font-weight: 400;
+    color: #4F5665;
+}
+
+.testimonials__rating{
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 80px;
+    padding-right: 7px;
+}
+
+
+.testimonials__text {
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.cta{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+    margin-bottom: -80px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.cta__title{
+    font-size: 35px;
+    font-weight: 500;
+    margin-left: 40px;
+    max-width: 54%;
+    margin-bottom: 20px;
+}
+
+.cta__p{
+    font-weight: 400;
+    color: #4F5665;
+    margin-left: 40px;
+}
+
+.cta__btn{
+    width: 250px;
+    height: 60px;
+    background: #F53838;
+    color:white;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 22px 54px #F5383859;
+    font-weight: 700;
+    line-height: 1.4;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 60px;
+}
+.cta__btn:hover{
+    transform: scale(1.05);
+}
+
+.footer {
+    background: #F6F5F5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    padding-top: 140px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom: 40px;
+}
+
+.footer__copyright {
+    font-size: 16px;
+    font-weight:400;
+    color: #AFB5C0;
+    line-height: 30px;
+}
+
+.footer__copyright__bolt{
+    font-weight:500;
+}
+
+.social__btn img{
+    width: 50px;
+    height: 50px;
+
+}
+
+.footer__social img:hover{
+     transform: scale(1.2) rotate(5deg)
+}
+.footer__logo{
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    gap: 6px;
+}
+
+.footer__logo--img{
+    height: 36px;
+    width: 35px;
+}
