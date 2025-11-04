@@ -1,0 +1,66 @@
+.header__title--form{
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing:-3px;
+    color: blue;
+    justify-content: flex-start;
+}
+
+.hotel__main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hotel__main--name{
+    font-weight: 500;
+}
+
+.hotel__main--title{
+    font-weight: 450;
+}
+
+#hotelImage{
+  border-radius: 50px;
+  border: none;
+}
+
+#hotelName,
+#hotelDescription,
+#hotelRooms,
+#hotelVisitors{
+    border-radius: 10px;
+    height: 40px;
+    width: 480px;
+    border: #e1deded1;
+    padding: 5px;
+    background-color: #efeeeee2;
+    font-size: 11px;
+}
+
+#hotelDescription{
+    height: 95px;
+    resize: none;
+    font-family: 'Rubik', sans-serif;
+    font-size: 11px;
+    padding: 5px;
+}
+
+#hotelButton{
+  background-color: #fff;
+  border: 1px solid blue;
+  width: 480px;
+  height: 40px;
+  border-radius: 30px;
+  text-align: center; 
+  font-size: 17px;
+  font-weight: 700;
+  color: blue;
+
+}
+
+#hotelButton:hover{
+    background-color: rgb(10, 100, 245); 
+  color: #fff;
+}
