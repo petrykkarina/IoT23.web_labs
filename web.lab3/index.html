@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+   <main> 
+    <header class="header">
+        <span class="header__title">KeyRoom</span>
+        <nav class="header__nav">
+            <ul>
+                <li><a href="#" target="_blank"></a>My Hotels</li>
+                <li><a href="#" target="_blank"></a>Create Hotel</li>
+            </ul>
+        </nav>
+        <form id="searchForm" action="search_results.html" method="get">
+            <input class="header__search" type="text" name="query" placeholder="Enter the name of the hotel">
+            <button class="header__form--btns" type="button">Search</button>
+            <button class="header__form--btnc" type="reset">Clear</button>
+        </form>
+    </header>
+
+
+    <section class="hero">
+        <div class="hero_filters">
+            <h1 class="hero_title">Manage Hotel</h1>
+            <div class="hero__sort">
+                <h2>Sort by the most guests </h2>
+                <button class="hero__sort--btn">sort</button>
+            </div>
+            <div class="hero_count">
+                <h2>Count total rooms:</h2>
+                <button class="hero__count--btn">Count</button>
+            </div>
+            <h3>Total rooms: <span id="total-expenses" class="hero__total">0</span></h3>
+        </div>
+
+
+        <div class="hero__contetnt">
+            <div class="hero__cards__wrapper"> 
+                <div class="hero_cards">
+                    <img src="img/hotel1.jpg" alt="Hotel photo" srcset="">
+                    <h2 class="hero__contetnt--title">Crystal Bay</h2>
+                    <p class="hero_count-p">Ideally located in the centre of Malaga, offers air-conditioned rooms,
+                     as well as a terrace, free WiFi and a bar. </p>
+                     <p class="hero__rooms">Number of rooms: <span>30</span></p>
+                     <p class="hero__visitors">Number of visitors per year: <span>16700</span></p>
+                    <div class="hero__content--btn">
+                        <button class="hero__content--btn1" type="button">Edit</button>
+                        <button class="hero__content--btn2" type="button">Remove</button>
+                    </div>
+                </div>
+
+                <div class="hero_cards">
+                    <img  src="img/hotel2.jpg" alt="Hotel photo" srcset="">
+                    <h2 class="hero__contetnt--title">Boutique Residence</h2>
+                    <p class="hero_count-p">This hotel with free Wi-Fi is located in the centre of Budapest, 
+                        about 50 metres from St. Stephen's Basilica.</p>
+                    <p class="hero__rooms" >Number of rooms: <span>20</span></p>
+                    <p class="hero__visitors">Number of visitors per year: <span>10950</span></p>
+                    <div class="hero__content--btn">
+                        <button class="hero__content--btn1" type="button">Edit</button>
+                        <button class="hero__content--btn2" type="button">Remove</button>
+                    </div>
+                </div>
+
+                <div class="hero_cards">
+                    <img src="img/hotel3.jpg" alt="Hotel photo" srcset="">
+                    <h2 class="hero__contetnt--title">Magic Sun</h2>
+                    <p class="hero_count-p">A modern city hotel offering comfortable rooms, free Wi-Fi, and easy access to popular attractions. 
+                        Perfect for both business and leisure stays.</p>
+                        <p class="hero__rooms" >Number of rooms: <span>12</span></p>
+                        <p class="hero__visitors">Number of visitors per year: <span>3890</span></p>
+                    <div class="hero__content--btn">
+                        <button class="hero__content--btn1" type="button">Edit</button>
+                        <button class="hero__content--btn2" type="button">Remove</button>
+                    </div>
+                </div>
+
+                <div class="hero_cards">
+                    <img src="img/hotel4.jpg" alt="Hotel photo" srcset="">
+                    <h2 class="hero__contetnt--title">Callas House</h2>
+                    <p class="hero_count-p">A cozy boutique hotel with elegant interiors, friendly staff, and a quiet atmosphere.
+                         Guests enjoy fresh breakfasts and personalized service. </p>
+                    <p class="hero__rooms">Number of rooms: <span>8</span></p>
+                    <p class="hero__visitors">Number of visitors per year: <span>2045</span></p>
+                    <div class="hero__content--btn">
+                        <button class="hero__content--btn1" type="button">Edit</button>
+                        <button class="hero__content--btn2" type="button">Remove</button>
+                    </div>
+                </div>
+
+                <div class="hero_cards">
+                    <img src="img/hotel5.jpg" alt="Hotel photo" srcset="">
+                    <h2 class="hero__contetnt--title">Raddison Beight</h2>
+                    <p class="hero_count-p">A luxury seaside resort featuring spacious suites, an outdoor pool, 
+                        and breathtaking ocean views. Ideal for a relaxing holiday escape.</p>
+                    <p class="hero__rooms" >Number of rooms: <span>42</span></p>
+                    <p class="hero__visitors">Number of visitors per year: <span>21600</span></p>
+                    <div class="hero__content--btn">
+                        <button class="hero__content--btn1" type="button">Edit</button>
+                        <button class="hero__content--btn2" type="button" >Remove</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
+   </main>
+   <script src="js/search.js"></script>
+   <script src="js/sort.js"></script>
+   <script src="js/count.js"></script>
+</body>
+</html>

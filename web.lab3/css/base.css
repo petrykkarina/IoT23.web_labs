@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  color: #0B132A;
+  background-color: #fff;
+  line-height: 1.5;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-left: 50px;
+  margin-bottom: 40px;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
