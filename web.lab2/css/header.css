@@ -1,0 +1,159 @@
+.header {
+  padding: 38px 0;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__menu{
+  display: none;
+  cursor: pointer;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  height: 36px;
+  width: 35px;
+}
+
+.logo-text-h {
+  color: #0B132A;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.bold-logo {
+  font-weight: 700;
+}
+
+.nav-center ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-center ul li a {
+  font-size: 16px;
+  color:#4F5665;
+  transition: color 0.3s ease;
+}
+.nav-center ul li a:hover {
+  color:#F53838;
+}
+
+.authorisation {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.authorisation .sing-in {
+  color: #0B132A;  
+  font-weight: 500;
+  transition: transform 0.2s ease;
+}
+
+.authorisation .sing-up {
+  background-color: white;
+  width: 150px;
+  height: 45px;
+  padding: 9px 17px;
+  border: 1px solid #F53855;
+  border-radius: 50px;
+  text-align: center; 
+  color:#F53855;
+  font-weight: 500;
+  min-width: 100px;
+  transition: all 0.3s ease;
+} 
+.authorisation .sing-up:hover {
+  background-color: #F53838;
+  color: white;
+  transform: translateY(-3px) scale(1.05); 
+}
+.authorisation .sing-in:active {
+  transform: scale(0.97); 
+}
+
+
+@media screen and (max-width: 1024px) {
+  .header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.97);
+    z-index: 10;
+  }
+
+  .logo-icon{
+    width: 16px;
+    height: 17px;
+  }
+
+  .logo-text-h{
+    font-size: 15px;
+    margin-right: 10px;
+  }
+
+  .logo{
+    gap: 5px;
+  }
+
+  .header__menu{
+    display: block;
+  }
+
+  .header .authorisation{
+    display: none;
+  }
+
+  .nav-center{
+    background: #ffffff;
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+     transition: clip-path 0.6s ease-in-out; 
+
+  }
+
+  .nav-center.open {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .nav-center ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 55px;
+    padding: 80px 0;
+    height: auto;
+  }
+
+  .nav-center .header__nav-item {
+    flex: unset;
+    padding:0;
+  }
+
+  .header .nav-center a{
+    display: block;
+    font-size: 25px;
+    font-weight: 400;
+    color: #0B132A;
+  }
+}
