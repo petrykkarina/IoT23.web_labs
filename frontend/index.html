@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+   <main> 
+    <header class="header">
+        <span class="header__title">KeyRoom</span>
+        <nav class="header__nav">
+            <ul>
+                <li><a class="header__nav-1" href="#" target="_blank">My hotels</a></li>
+                <li class="header__nav-2"><a href="create-page.html" target="_blank">Create hotel</a></li>
+            </ul>
+        </nav>
+        <form id="searchForm" action="search_results.html" method="get">
+            <input class="header__search" type="text" name="query" placeholder="Enter the name of the hotel">
+            <button class="header__form--btns" type="button">Search</button>
+            <button class="header__form--btnc" type="reset">Clear</button>
+        </form>
+    </header>
+
+
+    <section class="hero">
+        <div class="hero_filters">
+            <h1 class="hero_title">Manage Hotel</h1>
+            <div class="hero__sort">
+                <h2>Sort by the most guests </h2>
+                <button class="hero__sort--btn">sort</button>
+            </div>
+            <div class="hero_count">
+                <h2>Count total rooms:</h2>
+                <button class="hero__count--btn">Count</button>
+            </div>
+            <h3>Total rooms: <span id="total-expenses" class="hero__total">0</span></h3>
+        </div>
+
+        <div class="hero__contetnt">
+            <div class="hero__cards__wrapper"> 
+            </div>
+        </div>
+
+    </section>    
+   </main>
+
+    <script src="js/index.js"></script>
+    <script src="js/create.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/sort.js"></script>
+    <script src="js/count.js"></script>
+
+</body>
+</html>
+ 

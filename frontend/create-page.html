@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create hotel</title>
+    <link rel="stylesheet" href="css/style_create.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <header class="header__form">
+            <span class="header__title--form">KeyRoom</span>
+        </header>
+
+        <div class="hotel__main">
+            <h1 class="hotel__main--name">Create hotel</h1><br>
+            
+            <form id="hotelForm">
+                <input type="hidden" id="hotelId" value="">
+
+                <label for="hotelImage" class="hotel__main--title">Hotel photo:</label><br>
+                <input type="file" id="hotelImage" accept="image/*"><br><br>
+
+                <label for="hotelName" class="hotel__main--title">Hotel name:</label><br>
+                <input type="text" id="hotelName" class="hero__contetnt--title" 
+                       placeholder="Enter hotel name" required><br><br>
+
+                <label for="hotelDescription" class="hotel__main--title">Description:</label><br>
+                <textarea id="hotelDescription" class="hero_count-p" 
+                          placeholder="Enter some text..." required rows="5" cols="50"></textarea><br><br>
+
+                <label for="hotelRooms" class="hotel__main--title">Number of rooms:</label><br>
+                <input type="number" id="hotelRooms" class="hero__rooms" 
+                       placeholder="Enter number of rooms" required><br><br>
+
+                <label for="hotelVisitors" class="hotel__main--title">Number of visitors per year:</label><br>
+                <input type="number" id="hotelVisitors" class="hero__visitors" 
+                       placeholder="Enter number of visitors" required><br><br>
+
+                <button id="hotelButton" type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="js/create.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,59 @@
+.hero__cards__wrapper{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    gap: 30px;
+
+}
+
+.hero_cards{
+    max-width: 280px;
+    border: 1px solid #ccc ;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.hero_cards img{
+    width: 200px;
+}
+
+.hero__contetnt--title{
+    font-weight: 600;
+}
+
+.hero_count-p{
+    color: #4F5665;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.hero__rooms,
+.hero__visitors{
+    font-weight: 500;
+    font-size: 13px;
+}
+
+
+.edit-btn{
+  background-color: #fff;
+  border: 1px solid blue;
+  width: 60px;
+  height: 30px;
+  border-radius: 30px;
+  text-align: center; 
+  font-weight: 600;
+  color:blue;
+  margin-top: 15px;
+}
+
+.remove-btn{
+  background-color: #fff;
+  border: 1px solid #F53855;
+  width: 90px;
+  height: 30px;
+  border-radius: 30px;
+  text-align: center; 
+  font-weight: 600;
+  color: #F53855;
+}
+
