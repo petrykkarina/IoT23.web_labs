@@ -1,41 +1,66 @@
-(function() {
-    const searchForm = document.getElementById('searchForm');
-    const searchBtn = document.querySelector('.header__form--btns');
-    const clearBtn = document.querySelector('.header__form--btnc');
-    const searchInput = document.querySelector('.header__search');
+(function () {
+  const searchForm = document.getElementById('searchForm');
+  const searchBtn = document.querySelector('.header__form--btns');
+  const clearBtn = document.querySelector('.header__form--btnc');
+  const searchInput = document.querySelector('.header__search');
 
-    function performSearch() {
-        if (typeof hotels === 'undefined' || typeof updateCards === 'undefined') {
-            console.error('search.js: Глобальні "hotels" або "updateCards" не знайдені. Переконайся, що index.js завантажений першим.');
-            return;
-        }
-
-        const query = searchInput.value.trim().toLowerCase();
-
-        const filtered = hotels.filter(h =>
-            h.name.toLowerCase().includes(query)
-        );
-
-        updateCards(filtered);
+  async function performSearch() {
+    if (typeof API_URL === 'undefined' || typeof updateCards === 'undefined') {
+      console.error('search.js: Global "API_URL" or "updateCards" not found.');
+      return;
     }
 
-    searchBtn.addEventListener('click', performSearch);
+    const query = searchInput.value.trim();
 
-    clearBtn.addEventListener('click', () => {
-        searchInput.value = '';
-        if (typeof hotels !== 'undefined') {
-            updateCards(hotels); 
-        }
-    });
+    try {
+      const url = query
+        ? `${API_URL}?search=${encodeURIComponent(query)}`
+        : API_URL;
 
-    searchInput.addEventListener('keypress', e => {
-        if (e.key === 'Enter') {
-            e.preventDefault(); 
-            performSearch();
-        }
-    });
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error('Failed to fetch hotels');
+      }
 
-    if (searchForm) {
-        searchForm.addEventListener('submit', e => e.preventDefault());
+      hotels = await response.json();
+      updateCards();
+    } catch (error) {
+      console.error('Error searching hotels:', error);
     }
+  }
+
+  async function clearSearch() {
+    searchInput.value = '';
+
+    if (typeof API_URL === 'undefined') {
+      console.error('search.js: Global "API_URL" not found.');
+      return;
+    }
+
+    try {
+      const response = await fetch(API_URL);
+      if (!response.ok) {
+        throw new Error('Failed to fetch hotels');
+      }
+
+      hotels = await response.json();
+      updateCards();
+    } catch (error) {
+      console.error('Error fetching hotels:', error);
+    }
+  }
+
+  searchBtn.addEventListener('click', performSearch);
+  clearBtn.addEventListener('click', clearSearch);
+
+  searchInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      performSearch();
+    }
+  });
+
+  if (searchForm) {
+    searchForm.addEventListener('submit', (e) => e.preventDefault());
+  }
 })();

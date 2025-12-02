@@ -1,16 +1,26 @@
-(function() {
-    const sortBtn = document.querySelector('.hero__sort--btn');
+(function () {
+  const sortBtn = document.querySelector('.hero__sort--btn');
 
-    if (sortBtn) {
-        sortBtn.addEventListener('click', () => {
-            if (typeof hotels === 'undefined' || typeof updateCards === 'undefined') {
-                console.error('sort.js: Глобальні "hotels" або "updateCards" не знайдені.');
-                return;
-            }
+  if (sortBtn) {
+    sortBtn.addEventListener('click', async () => {
+      if (
+        typeof API_URL === 'undefined' ||
+        typeof updateCards === 'undefined'
+      ) {
+        console.error('sort.js: Global "API_URL" or "updateCards" not found.');
+        return;
+      }
 
-            hotels.sort((a, b) => Number(b.visitors) - Number(a.visitors));
-            
-            updateCards(); 
-        });
-    }
+      try {
+        const response = await fetch(`${API_URL}?sort=visitors`);
+        if (!response.ok) {
+          throw new Error('Failed to fetch sorted hotels');
+        }
+        hotels = await response.json();
+        updateCards();
+      } catch (error) {
+        console.error('Error sorting hotels:', error);
+      }
+    });
+  }
 })();
