@@ -1,0 +1,32 @@
+.home-container {
+  padding: 30px 20px;
+  max-width: 1250px;
+  margin: 0 auto;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #f5e2b8;
+  background: #3b0016;
+}
+
+/* About Section */
+.about-section {
+  padding: 50px 20px;
+  line-height: 1.7;
+  border-top: 2px solid rgba(212,175,55,.3);
+  margin-top: 40px;
+  background: linear-gradient(145deg, #3b0016, #4d001d);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.2);
+}
+
+.heroBanner {
+  width: 100%;
+  margin-bottom: 40px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.bannerImage {
+  width: 100%;
+  height: 400px; 
+  object-fit: cover;
+}
